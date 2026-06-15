@@ -1,0 +1,12 @@
+{
+  "expert": {
+    "mode": "human",
+    "model": "auto",
+    "fallback": "current_model",
+    "api": null,
+    "human": {
+      "save_report": "auto",
+      "report_dir": "~/.duck/reports"
+    }
+  }
+}

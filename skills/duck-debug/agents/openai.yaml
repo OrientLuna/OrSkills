@@ -1,0 +1,4 @@
+interface:
+  display_name: "Duck Debug"
+  short_description: "Verify bugs by explaining and tracing evidence"
+  default_prompt: "Use $duck-debug to investigate this failing test without guessing."

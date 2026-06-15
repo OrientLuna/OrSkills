@@ -1,0 +1,9 @@
+collection:
+  name: "orskills"
+  display_name: "OrSkills"
+  description: "Personal skill collection for Codex and related agent runtimes."
+  version: "0.1.0"
+skills:
+  - path: "../skills/cn-software-copyright"
+  - path: "../skills/fk-opencode"
+  - path: "../skills/duck-debug"

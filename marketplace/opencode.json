@@ -1,0 +1,10 @@
+{
+  "name": "orskills",
+  "version": "0.1.0",
+  "description": "Portable agent skill collection for OpenCode-adjacent workflows.",
+  "skills": [
+    "skills/cn-software-copyright",
+    "skills/fk-opencode",
+    "skills/duck-debug"
+  ]
+}
