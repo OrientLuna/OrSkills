@@ -14,16 +14,54 @@ The repository is organized as a portable skill library: each skill lives under 
 
 ## Install
 
-For Codex, copy or symlink the desired skill folders into your Codex skills directory:
+Clone the repository:
+
+```bash
+git clone https://github.com/OrientLuna/OrSkills.git
+cd OrSkills
+```
+
+### Codex
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R skills/cn-software-copyright "${CODEX_HOME:-$HOME/.codex}/skills/"
-cp -R skills/fk-opencode "${CODEX_HOME:-$HOME/.codex}/skills/"
-cp -R skills/duck-debug "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R skills/* "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-For OpenCode or Claude-style runtimes, use the same `skills/<name>/SKILL.md` folders as the source of truth, then adapt the runtime-specific plugin metadata under `marketplace/`.
+See [docs/install-codex.md](docs/install-codex.md) for details.
+
+### Claude Code
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R skills/* ~/.claude/skills/
+```
+
+### OpenCode
+
+Copy the desired skill folders into your OpenCode skill location. For `fk-opencode`, install and configure `fkoc` separately.
+
+See [docs/install-opencode.md](docs/install-opencode.md) for details.
+
+### Install a single skill
+
+Replace `skills/*` with the specific folder:
+
+```bash
+cp -R skills/duck-debug ~/.claude/skills/
+```
+
+## Update
+
+Pull the latest changes and overwrite installed skills:
+
+```bash
+cd OrSkills
+git pull
+cp -R skills/* ~/.claude/skills/   # or your Codex / OpenCode path
+```
+
+Check the current version in `marketplace/claude-plugin.json` or `marketplace/opencode.json`.
 
 ## Validate
 
@@ -42,6 +80,10 @@ The checks look for missing frontmatter, invalid skill names, machine-specific p
 - Keep API keys in environment variables only.
 - Keep private local directories, generated build output, and experimental source trees out of the repository.
 - Add larger procedural details under `references/` so `SKILL.md` stays concise.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the fork, validate, and pull-request workflow.
 
 ## License
 
