@@ -3,9 +3,9 @@ name: duck-debug
 description: Use for bugs, crashes, exceptions, failing tests, wrong output, regressions, unexpected behavior, or explicit /duck requests. Especially useful when the agent is guessing without evidence, skipping root-cause analysis, or claiming a fix without rerunning the failing case.
 ---
 
-# Duck Debug
+# 🦆 Duck Debug
 
-Debug by explaining the system precisely to a silent duck. The duck does not answer. The value is that clear explanation exposes gaps between design intent and actual behavior.
+Debug by explaining the system precisely to a silent duck 🦆. The duck does not answer. The value is that clear explanation exposes gaps between design intent and actual behavior.
 
 ## Required references
 
@@ -22,6 +22,8 @@ Follow the four steps in order. Each step must produce an artifact before contin
 
 ### 1. Explain design intent
 
+🦆 "Let me explain how this is supposed to work."
+
 Find and read the relevant design document, specification, API contract, function signature, type definition, or test expectation.
 
 Explain:
@@ -35,6 +37,8 @@ Required artifact: a source quote or file:line reference plus a concise explanat
 Do not rely on memory when a source can be read.
 
 ### 2. Trace actual data flow
+
+🦆 "Now let me trace how the data actually flows."
 
 Trace from the data entry point to the observed failure.
 
@@ -50,6 +54,8 @@ Required artifact: hop-by-hop data flow with file:line references and tool verif
 
 ### 3. State hypothesis, then verify
 
+🦆 "My hypothesis is... here's what I expect to see."
+
 Before looking, state:
 
 1. the hypothesis
@@ -61,6 +67,8 @@ Then verify with tools and compare the actual result against both expectations.
 Required artifact: hypothesis, expected observations, command or inspection used, actual output, and conclusion.
 
 ### 4. Shift perspective
+
+🦆 "Wait, let me look at this from a different angle..."
 
 If steps 1-3 do not find the bug:
 
@@ -90,10 +98,12 @@ Teaching: verbose plus why each verification tool was chosen.
 
 ## Escalation
 
+🦆 "I've explained this twice with the same framing and found no gap. I need a fresh perspective."
+
 If two complete rounds of the protocol produce no new information, prepare a Duck Debug Report:
 
 ```markdown
-## Duck Debug Report
+## 🦆 Duck Debug Report
 
 ### Problem Statement
 [one-line bug description]
